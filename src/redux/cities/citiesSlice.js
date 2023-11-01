@@ -1,3 +1,6 @@
+import { v4 as uuidv4 } from 'uuid';
+import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
+
 const airApiKey = 'dea85b82ceccf415bffc6e9e3c2ca0fa';
 const coordinateApiKey = 'rB16lee6ZvybB0ZCrsrzwQ==6odUeEwciclckq71';
 
