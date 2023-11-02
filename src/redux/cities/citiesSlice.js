@@ -69,9 +69,10 @@ const citiesSlice = createSlice({
   initialState,
   extraReducers: (builder) => {
     builder.addCase(getCitiesData.fulfilled, (state, action) => {
-      state.citiesData = action.payload;
+      state.cities.citiesData = action.payload;
     });
   },
 });
 
+export { getCitiesData };
 export default citiesSlice.reducer;
