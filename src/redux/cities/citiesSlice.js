@@ -1,4 +1,5 @@
-// import { v4 as uuidv4 } from 'uuid';
+/* eslint-disable no-unused-vars */
+import { v4 as uuidv4 } from 'uuid';
 import axios from 'axios';
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
@@ -38,10 +39,14 @@ const cityAirData = async (lat, long) => {
 };
 
 const cityCoordinates = async (city) => {
-  const response = await axios.get(
-    `https://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&appid=${baseUrl}`,
-  );
-  return response.data;
+  try {
+    const response = await axios.get(
+      `https://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&appid=${baseUrl}`,
+    );
+    return response.data;
+  } catch (error) {
+    return 'failed to fetch';
+  }
 };
 
 const GET_DATA = 'airquality/getindex';
@@ -63,7 +68,6 @@ const getCitiesData = createAsyncThunk(GET_DATA, async (_, thunkAPI) => {
   );
 
   const results = await Promise.all(citiesDataArray);
-  // console.log(results);
   return results;
 });
 
@@ -72,7 +76,7 @@ const citiesSlice = createSlice({
   initialState,
   extraReducers: (builder) => {
     builder.addCase(getCitiesData.fulfilled, (state, action) => {
-      state.cities.citiesData = action.payload;
+      state.citiesData = action.payload;
       console.log(action.payload);
     });
   },
