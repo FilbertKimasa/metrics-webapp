@@ -4,7 +4,7 @@ import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux/es/hooks/useSelector';
 import { getCitiesData } from '../redux/cities/citiesSlice';
 
-function CountryList() {
+function CitiesList() {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getCitiesData());
@@ -13,4 +13,4 @@ function CountryList() {
   return <div>hi</div>;
 }
 
-export default CountryList;
+export default CitiesList;

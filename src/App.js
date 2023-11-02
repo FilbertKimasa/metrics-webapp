@@ -1,10 +1,10 @@
 import React from 'react';
-import CountryList from './componets/CountryList';
+import CitiesList from './componets/CitiesList';
 
 function App() {
   return (
     <div>
-      <CountryList />
+      <CitiesList />
     </div>
   );
 }
