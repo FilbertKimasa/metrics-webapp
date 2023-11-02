@@ -1,7 +1,12 @@
 import React from 'react';
+import CountryList from './componets/CountryList';
 
 function App() {
-  return <div>hi</div>;
+  return (
+    <div>
+      <CountryList />
+    </div>
+  );
 }
 
 export default App;
