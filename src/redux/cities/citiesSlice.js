@@ -1,8 +1,8 @@
-import { v4 as uuidv4 } from 'uuid';
+// import { v4 as uuidv4 } from 'uuid';
+import axios from 'axios';
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
-const airApiKey = 'dea85b82ceccf415bffc6e9e3c2ca0fa';
-const coordinateApiKey = 'rB16lee6ZvybB0ZCrsrzwQ==6odUeEwciclckq71';
+const baseUrl = 'dea85b82ceccf415bffc6e9e3c2ca0fa';
 
 const initialState = {
   cities: [
@@ -31,37 +31,40 @@ const initialState = {
 };
 
 const cityAirData = async (lat, long) => {
-  const response = await fetch(
-    `https://api.openweathermap.org/data/2.5/air_pollution?lat=${lat}&lon=${long}&appid=${airApiKey}`,
-  ).then((resp) => resp.json());
-  return response;
+  const response = await axios.get(
+    `https://api.openweathermap.org/data/2.5/air_pollution?lat=${lat}&lon=${long}&appid=${baseUrl}`,
+  );
+  return response.data;
 };
 
 const cityCoordinates = async (city) => {
-  const response = await fetch(
-    `https://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&appid=${coordinateApiKey}`,
-  ).then((resp) => resp.json());
-  return response;
+  const response = await axios.get(
+    `https://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&appid=${baseUrl}`,
+  );
+  return response.data;
 };
 
 const GET_DATA = 'airquality/getindex';
 const getCitiesData = createAsyncThunk(GET_DATA, async (_, thunkAPI) => {
+  const { cities } = thunkAPI.getState().cities;
   const citiesDataArray = [];
-  const { cities } = thunkAPI.getState();
-  cities.forEach((city) => {
-    citiesDataArray.push(
-      cityCoordinates(city).then(async (cityCoord) => {
-        const { lat } = cityCoord[0];
-        const long = cityCoord[0].lon;
-        const cityData = await cityAirData(lat, long);
-        return { id: uuidv4(), city, data: cityData.list[0] };
-      }),
-    );
-  });
-  const citiesData = await Promise.all(citiesDataArray).then(
-    (result) => result,
+  await Promise.all(
+    cities.map(async (city) => {
+      try {
+        const coordinateData = await cityCoordinates(city);
+        const { lat } = coordinateData[0];
+        const { lon } = coordinateData[0];
+        const cityAirPromise = cityAirData(lat, lon);
+        citiesDataArray.push(cityAirPromise);
+      } catch (error) {
+        citiesDataArray.push(null);
+      }
+    }),
   );
-  return citiesData;
+
+  const results = await Promise.all(citiesDataArray);
+  // console.log(results);
+  return results;
 });
 
 const citiesSlice = createSlice({
@@ -70,6 +73,7 @@ const citiesSlice = createSlice({
   extraReducers: (builder) => {
     builder.addCase(getCitiesData.fulfilled, (state, action) => {
       state.cities.citiesData = action.payload;
+      console.log(action.payload);
     });
   },
 });
