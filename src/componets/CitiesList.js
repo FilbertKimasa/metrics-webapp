@@ -16,7 +16,7 @@ function CitiesList() {
     return (
       <ul>
         {cityObject.citiesData.map((cityData) => (
-          <SingleCity key={cityData.id} itemProp={cityData} />
+          <SingleCity key={cityData.id} cityProp={cityData} />
         ))}
       </ul>
     );
