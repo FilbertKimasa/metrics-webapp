@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 function SingleCity({ cityProp }) {
   const { aqi } = cityProp.data.list[0].main;
@@ -26,15 +27,17 @@ function SingleCity({ cityProp }) {
 
   return (
     <li>
-      <h2>{cityProp.city}</h2>
-      <p>
-        Air Quality:
-        {airQuality}
-      </p>
-      <p>
-        Quality Index:
-        {aqi}
-      </p>
+      <Link to={`details/${cityProp.id}`}>
+        <h2>{cityProp.city}</h2>
+        <p>
+          Air Quality:
+          {airQuality}
+        </p>
+        <p>
+          Quality Index:
+          {aqi}
+        </p>
+      </Link>
     </li>
   );
 }
