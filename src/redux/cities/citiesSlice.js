@@ -60,7 +60,11 @@ const getCitiesData = createAsyncThunk(GET_DATA, async (_, thunkAPI) => {
         const { lat } = coordinateData[0];
         const { lon } = coordinateData[0];
         const cityAirPromise = cityAirData(lat, lon);
-        citiesDataArray.push(cityAirPromise);
+        citiesDataArray.push({
+          id: uuidv4(),
+          city,
+          data: await cityAirPromise,
+        });
       } catch (error) {
         citiesDataArray.push(null);
       }
@@ -77,7 +81,6 @@ const citiesSlice = createSlice({
   extraReducers: (builder) => {
     builder.addCase(getCitiesData.fulfilled, (state, action) => {
       state.citiesData = action.payload;
-      console.log(action.payload);
     });
   },
 });
