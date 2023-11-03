@@ -1,27 +1,38 @@
-import React, { useEffect } from 'react';
+/* eslint-disable function-paren-newline */
+/* eslint-disable implicit-arrow-linebreak */
+import React, { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux/es/hooks/useSelector';
 import { getCitiesData } from '../redux/cities/citiesSlice';
 import SingleCity from './SingleCity';
 
 function CitiesList() {
-  // const cityObject = useSelector((state) => state.cities);
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getCitiesData());
   }, [dispatch]);
   const cityObject = useSelector((state) => state.cities);
 
-  if (cityObject && cityObject.citiesData && cityObject.citiesData.length > 0) {
-    return (
+  const [filterText, setFilterText] = useState('');
+
+  const filteredCities = cityObject.citiesData.filter((cityData) =>
+    cityData.city.toLowerCase().includes(filterText.toLowerCase()),
+  );
+  return (
+    <div>
+      <input
+        type="text"
+        placeholder="Search..."
+        value={filterText}
+        onChange={(e) => setFilterText(e.target.value)}
+      />
       <ul>
-        {cityObject.citiesData.map((cityData) => (
+        {filteredCities.map((cityData) => (
           <SingleCity key={cityData.id} cityProp={cityData} />
         ))}
       </ul>
-    );
-  }
-  return <div>Loading...</div>;
+    </div>
+  );
 }
 
 export default CitiesList;
