@@ -4,14 +4,20 @@ import { useSelector } from 'react-redux/es/hooks/useSelector';
 import { getCitiesData } from '../redux/cities/citiesSlice';
 
 function CitiesList() {
-  const cityData = useSelector((state) => state.cities);
+  const cityObject = useSelector((state) => state.cities);
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getCitiesData());
   }, [dispatch]);
 
-  console.log(cityData);
-  return <div>hi</div>;
+  console.log(cityObject.citiesData);
+  return (
+    <ul>
+      {cityObject.citiesData.map((city) => (
+        <RocketItem key={city.id} itemProp={city} />
+      ))}
+    </ul>
+  );
 }
 
 export default CitiesList;
