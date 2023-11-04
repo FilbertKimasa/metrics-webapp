@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SingleCityDetails renders the component with correct city name and components 1`] = `
+<DocumentFragment>
+  <div
+    class="details-container"
+  >
+    <header
+      class="details-header"
+    >
+      <a
+        href="/"
+      >
+        <i
+          class="material-icons back-arrow"
+        >
+          chevron_left
+        </i>
+      </a>
+      <h2
+        class="city-name"
+      />
+    </header>
+  </div>
+</DocumentFragment>
+`;

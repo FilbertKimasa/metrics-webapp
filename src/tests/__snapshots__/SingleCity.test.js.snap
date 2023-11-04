@@ -16,3 +16,31 @@ exports[`Header should render correctly 1`] = `
   </p>
 </div>
 `;
+
+exports[`SingleCity renders correctly 1`] = `
+<DocumentFragment>
+  <li
+    class="single-city "
+  >
+    <a
+      class="display-flex city-details"
+      href="/details/1"
+    >
+      <h2>
+        City 1
+      </h2>
+      <p>
+        Air Quality:
+        <span
+          style="font-weight: 800; font-size: 15px; color: rgb(247, 247, 0);"
+        >
+          Moderate
+        </span>
+      </p>
+      <p>
+        Quality Index:3
+      </p>
+    </a>
+  </li>
+</DocumentFragment>
+`;

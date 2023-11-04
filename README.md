@@ -14,6 +14,7 @@
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
+- [🚀 Live Demo](#live-demo)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
@@ -56,6 +57,15 @@ Get real-time air quality updates, track pollution levels for the big cities in 
 - **Fetch The Air quality data from the API from API**
 - **Display Air quality data basing on City**
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- Live Demo -->
+
+## 🚀 Live Demo <a name="live-demo"></a>
+
+- [Live Demo Link](https://noellincoln.github.io/movie-safari/)
+
+- [Video Demo Link](https://drive.google.com/file/d/1t2ispgOEyssYp7m2u1E_LVnjutzY2t00/view?usp=sharing)
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- GETTING STARTED -->
