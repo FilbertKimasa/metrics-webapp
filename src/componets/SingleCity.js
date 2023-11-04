@@ -52,9 +52,16 @@ function SingleCity({ cityProp }) {
 SingleCity.propTypes = {
   cityProp: PropTypes.shape({
     city: PropTypes.string.isRequired,
-    data: PropTypes.objectOf(PropTypes.string).isRequired,
-    id: PropTypes.number.isRequired,
+    id: PropTypes.string.isRequired,
+    data: PropTypes.shape({
+      list: PropTypes.arrayOf(
+        PropTypes.shape({
+          main: PropTypes.shape({
+            aqi: PropTypes.number.isRequired,
+          }).isRequired,
+        }),
+      ).isRequired,
+    }).isRequired,
   }).isRequired,
 };
-
 export default SingleCity;
