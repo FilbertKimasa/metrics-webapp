@@ -18,9 +18,7 @@ function CitiesList() {
 
   const [filterText, setFilterText] = useState('');
 
-  const filteredCities = cityObject.citiesData.filter((cityData) =>
-    cityData.city.toLowerCase().includes(filterText.toLowerCase()),
-  );
+  const filteredCities = cityObject.citiesData.filter((cityData) => cityData.city.toLowerCase().includes(filterText.toLowerCase()));
 
   return (
     <div className="display-flex home-layout">
