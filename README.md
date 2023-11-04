@@ -147,7 +147,7 @@ You can deploy this project using [GitHub Pages](https://pages.github.com/)
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/FilbertKimasa/space-travelers-hub/issues).
+Feel free to check the [issues page](https://github.com/FilbertKimasa/metrics-webapp/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -164,7 +164,7 @@ If you like this project please give it a star and follow the authers on github 
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to thank the entire Microverse community and family for the support and motivation.
+I would like to acknowledge Nelson Sakwa, the original creator of this design
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
