@@ -6,7 +6,7 @@ jest.mock('react-router-dom', () => ({
   Link: 'a',
 }));
 
-describe('Header', () => {
+describe('Heading', () => {
   it('should render correctly', () => {
     const component = renderer.create(<Heading />);
     const tree = component.toJSON();

@@ -85,5 +85,5 @@ const citiesSlice = createSlice({
   },
 });
 
-export { getCitiesData };
+export { getCitiesData, cityAirData };
 export default citiesSlice.reducer;
