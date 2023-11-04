@@ -23,4 +23,38 @@
   font-weight: 600;
   font-size: 30px;
   padding-right: 5%;
+  padding-top: 5px;
+}
+
+.title {
+  font-size: 34px;
+  text-align: center;
+  padding: 20px 10px;
+}
+
+.title span {
+  margin-left: 8px;
+}
+
+.sub-title {
+  text-align: center;
+  background-color: #35548b;
+  font-size: 25px;
+}
+
+.componets-list li {
+  font-size: 20px;
+  justify-content: space-between;
+}
+
+.componets-list li:nth-child(2n) {
+  background-color: #35548b;
+}
+
+.component-item {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  text-align: center;
+  padding: 19px;
+  font-size: 60px;
 }

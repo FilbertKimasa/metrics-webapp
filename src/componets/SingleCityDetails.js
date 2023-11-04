@@ -22,15 +22,14 @@ function SingleCityDetails() {
         <h2 className="city-name">{singleCity[0].city}</h2>
       </header>
 
-      <h3>
-        Air components composition in
-        {singleCity[0].city}
+      <h3 className="title">
+        Air components composition in<span>{singleCity[0].city}</span>
       </h3>
-      <p>Components concentation in μg/m3</p>
-      <ul>
+      <p className="sub-title">Components concentation in μg/m3</p>
+      <ul className="componets-list">
         {Object.entries(AirComponents).map(([key, value]) => (
-          <li key={key}>
-            <strong>{key}:</strong> {value}
+          <li key={key} className="component-item">
+            <strong>{key}</strong> {value}
           </li>
         ))}
       </ul>
