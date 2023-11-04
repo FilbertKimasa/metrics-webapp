@@ -1,0 +1,25 @@
+.home-layout {
+  flex-direction: column;
+  gap: 10px;
+}
+
+.search-box {
+  background-color: #e0e0e0;
+  height: 20px;
+  border-radius: 4px;
+  margin: 0 50px;
+  padding: 5px;
+  font-size: 14px;
+  border: none;
+  outline: none;
+}
+
+.search-box:focus {
+  border: 2px solid black;
+}
+
+.city-list {
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+}

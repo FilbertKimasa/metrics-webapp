@@ -2,6 +2,7 @@ import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import CitiesList from './componets/CitiesList';
 import SingleCityDetails from './componets/SingleCityDetails';
+import './styles/App.css';
 
 function App() {
   return (

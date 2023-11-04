@@ -1,0 +1,10 @@
+.display-grid {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 50% 50%;
+}
+
+.map {
+  width: 80%;
+  height: auto;
+}

@@ -6,6 +6,7 @@ import { useSelector } from 'react-redux/es/hooks/useSelector';
 import { getCitiesData } from '../redux/cities/citiesSlice';
 import SingleCity from './SingleCity';
 import Heading from './Heading';
+import '../styles/CitiesList.css';
 
 function CitiesList() {
   const dispatch = useDispatch();
@@ -20,15 +21,16 @@ function CitiesList() {
     cityData.city.toLowerCase().includes(filterText.toLowerCase()),
   );
   return (
-    <div>
+    <div className=" display-flex home-layout">
       <input
         type="text"
         placeholder="Search..."
         value={filterText}
         onChange={(e) => setFilterText(e.target.value)}
+        className="search-box"
       />
       <Heading />
-      <ul>
+      <ul className="city-list display-flex">
         {filteredCities.map((cityData) => (
           <SingleCity key={cityData.id} cityProp={cityData} />
         ))}
