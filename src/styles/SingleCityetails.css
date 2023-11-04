@@ -2,13 +2,12 @@
   color: #fff;
 }
 .details-container {
-  height: 100vh;
 }
 
 .details-header {
   display: grid;
   grid-auto-flow: row;
-  grid-template-columns: 5% auto;
+  grid-template-columns: 10% auto;
   width: 100vw;
   text-align: center;
   background-color: #35548b;
@@ -29,7 +28,7 @@
 .title {
   font-size: 34px;
   text-align: center;
-  padding: 20px 10px;
+  padding: 30px 10px;
 }
 
 .title span {
@@ -55,6 +54,9 @@
   display: grid;
   grid-template-columns: 50% 50%;
   text-align: center;
-  padding: 19px;
-  font-size: 60px;
+  padding: 18px;
+}
+
+.component-item strong {
+  font-size: 23px;
 }

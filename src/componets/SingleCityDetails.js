@@ -29,7 +29,7 @@ function SingleCityDetails() {
       <ul className="componets-list">
         {Object.entries(AirComponents).map(([key, value]) => (
           <li key={key} className="component-item">
-            <strong>{key}</strong> {value}
+            <strong>{key}</strong> <strong>{value}</strong>
           </li>
         ))}
       </ul>

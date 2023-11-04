@@ -34,3 +34,8 @@
 .city-list li:nth-child(4n) {
   background-color: #35548b;
 }
+
+.loading {
+  padding-top: 200px;
+  height: 100vh;
+}
