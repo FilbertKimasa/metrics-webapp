@@ -5,6 +5,7 @@ import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux/es/hooks/useSelector';
 import { getCitiesData } from '../redux/cities/citiesSlice';
 import SingleCity from './SingleCity';
+import Heading from './Heading';
 
 function CitiesList() {
   const dispatch = useDispatch();
@@ -26,6 +27,7 @@ function CitiesList() {
         value={filterText}
         onChange={(e) => setFilterText(e.target.value)}
       />
+      <Heading />
       <ul>
         {filteredCities.map((cityData) => (
           <SingleCity key={cityData.id} cityProp={cityData} />
