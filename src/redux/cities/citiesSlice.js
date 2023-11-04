@@ -3,7 +3,7 @@ import { v4 as uuidv4 } from 'uuid';
 import axios from 'axios';
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
-const baseUrl = 'dea85b82ceccf415bffc6e9e3c2ca0fa';
+const baseUrl = '862090a665075dd09b646a7cca4e4e1e';
 
 const initialState = {
   cities: [
