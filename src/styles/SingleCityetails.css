@@ -1,8 +1,6 @@
 * {
   color: #fff;
 }
-.details-container {
-}
 
 .details-header {
   display: grid;
@@ -21,7 +19,7 @@
 .city-name {
   font-weight: 600;
   font-size: 30px;
-  padding-right: 5%;
+  padding-right: 7%;
   padding-top: 5px;
 }
 
