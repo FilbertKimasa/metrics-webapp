@@ -6,7 +6,7 @@ function Heading() {
   return (
     <div className="display-grid">
       <img src={map} alt="map" className="map" />
-      <p>Air Quality In Some Africa Big Cities.</p>
+      <p className="heading">Air Quality In Some African Big Cities</p>
     </div>
   );
 }

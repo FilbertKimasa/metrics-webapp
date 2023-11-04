@@ -4,6 +4,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux/es/hooks/useSelector';
 import { useParams, Link } from 'react-router-dom';
+import '../styles/SingleCityetails.css';
 
 function SingleCityDetails() {
   const cityObject = useSelector((state) => state.cities);
@@ -13,11 +14,14 @@ function SingleCityDetails() {
   );
   const AirComponents = singleCity[0].data.list[0].components;
   return (
-    <div>
-      <Link to="/">
-        <i className="material-icons">chevron_left</i>
-      </Link>
-      <h2>{singleCity[0].city}</h2>
+    <div className="details-container">
+      <header className="details-header">
+        <Link to="/">
+          <i className="material-icons back-arrow">chevron_left</i>
+        </Link>
+        <h2 className="city-name">{singleCity[0].city}</h2>
+      </header>
+
       <h3>
         Air components composition in
         {singleCity[0].city}

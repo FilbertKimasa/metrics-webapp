@@ -21,14 +21,17 @@ function CitiesList() {
     cityData.city.toLowerCase().includes(filterText.toLowerCase()),
   );
   return (
-    <div className=" display-flex home-layout">
-      <input
-        type="text"
-        placeholder="Search..."
-        value={filterText}
-        onChange={(e) => setFilterText(e.target.value)}
-        className="search-box"
-      />
+    <div className="display-flex home-layout">
+      <div className="imput-countainer">
+        <input
+          type="text"
+          placeholder="Search..."
+          value={filterText}
+          onChange={(e) => setFilterText(e.target.value)}
+          className="search-box"
+        />
+      </div>
+
       <Heading />
       <ul className="city-list display-flex">
         {filteredCities.map((cityData) => (
