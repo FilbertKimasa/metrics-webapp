@@ -63,9 +63,9 @@ Get real-time air quality updates, track pollution levels for the big cities in 
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link](https://noellincoln.github.io/movie-safari/)
+- [Live Demo Link](https://air-pullution.onrender.com)
 
-- [Video Demo Link](https://drive.google.com/file/d/1t2ispgOEyssYp7m2u1E_LVnjutzY2t00/view?usp=sharing)
+- [Video Demo Link](https://drive.google.com/file/d/1XEIJrNZ9kZ8KaAYcqn64PiRJak61ss7t/view?usp=sharing)
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- GETTING STARTED -->
