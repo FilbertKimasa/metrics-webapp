@@ -1,0 +1,41 @@
+.home-layout {
+  flex-direction: column;
+  gap: 10px;
+  text-align: center;
+}
+
+.search-box {
+  background-color: #e0e0e0;
+  height: 20px;
+  border-radius: 4px;
+  padding: 5px;
+  font-size: 14px;
+  border: none;
+  outline: none;
+  color: black;
+}
+
+.imput-countainer {
+  background-color: #35548b;
+  text-align: center;
+  padding: 5px 0;
+}
+
+.search-box:focus {
+  border: 1px solid #aba9a8;
+}
+
+.city-list {
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.city-list li:nth-child(4n + 1),
+.city-list li:nth-child(4n) {
+  background-color: #35548b;
+}
+
+.loading {
+  padding-top: 200px;
+  height: 100vh;
+}

@@ -1,0 +1,18 @@
+.display-grid {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 50% 50%;
+}
+
+.map {
+  width: 170px;
+  height: auto;
+  margin: 0 auto;
+}
+
+.heading {
+  color: #fff;
+  font-weight: 200;
+  font-size: 30px;
+  margin: auto;
+}

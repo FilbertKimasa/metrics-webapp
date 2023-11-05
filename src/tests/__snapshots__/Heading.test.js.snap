@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header should render correctly 1`] = `
+<div
+  className="display-grid"
+>
+  <img
+    alt="map"
+    className="map"
+    src="africa-map.png"
+  />
+  <p
+    className="heading"
+  >
+    Air Quality In Some African Big Cities
+  </p>
+</div>
+`;
+
+exports[`Heading should render correctly 1`] = `
+<div
+  className="display-grid"
+>
+  <img
+    alt="map"
+    className="map"
+    src="africa-map.png"
+  />
+  <p
+    className="heading"
+  >
+    Air Quality In Some African Big Cities
+  </p>
+</div>
+`;
