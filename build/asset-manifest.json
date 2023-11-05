@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/static/css/main.cfae83c0.css",
-    "main.js": "/static/js/main.b67bf211.js",
+    "main.css": "/static/css/main.4c42f878.css",
+    "main.js": "/static/js/main.cd7efd65.js",
     "static/media/africa-map.png": "/static/media/africa-map.32adbf6c831bbada41ca.png",
     "index.html": "/index.html",
-    "main.cfae83c0.css.map": "/static/css/main.cfae83c0.css.map",
-    "main.b67bf211.js.map": "/static/js/main.b67bf211.js.map"
+    "main.4c42f878.css.map": "/static/css/main.4c42f878.css.map",
+    "main.cd7efd65.js.map": "/static/js/main.cd7efd65.js.map"
   },
   "entrypoints": [
-    "static/css/main.cfae83c0.css",
-    "static/js/main.b67bf211.js"
+    "static/css/main.4c42f878.css",
+    "static/js/main.cd7efd65.js"
   ]
 }

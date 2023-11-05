@@ -1,4 +1,3 @@
-/* eslint-disable max-len */
 import React, { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux/es/hooks/useSelector';
@@ -18,7 +17,11 @@ function CitiesList() {
 
   const [filterText, setFilterText] = useState('');
 
-  const filteredCities = cityObject.citiesData.filter((cityData) => cityData.city.toLowerCase().includes(filterText.toLowerCase()));
+  const filterTextLower = filterText.toLowerCase();
+  const filteredCities = cityObject.citiesData.filter((cityData) => {
+    const cityLower = cityData.city.toLowerCase();
+    return cityLower.includes(filterTextLower);
+  });
 
   return (
     <div className="display-flex home-layout">
